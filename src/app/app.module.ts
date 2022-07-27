@@ -5,9 +5,10 @@ import { FormBuilder, FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
 import { CardComponent } from './components/card/card.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, HttpClientModule],
   providers: [FormBuilder],
   declarations: [AppComponent, HelloComponent, CardComponent],
   bootstrap: [AppComponent],

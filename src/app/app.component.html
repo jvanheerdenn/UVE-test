@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm bg-light">
+<nav class="navbar navbar-expand-sm bg-info">
   <div class="container-fluid">
     <a class="navbar-brand">CONTACTS</a>
     <div class="collapse navbar-collapse justify-content-end">
@@ -14,30 +14,34 @@
     </div>
   </div>
 </nav>
-<div
-  class="
-    .d-none .d-md-none .d-xl-none
-    d-flex
-    flex-column flex-shrink-0
-    p-3
-    bg-light
-    w-25
-  "
-  style="width: 280px; height: 100vh"
->
-  <ul class="nav nav-pills flex-column mb-auto">
-    <li class="nav-item">
-      <form class="d-flex" role="search">
-        <input
-          class="form-control me-2"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
-        />
-        <button class="btn btn-outline" type="submit">Search</button>
-      </form>
-    </li>
-  </ul>
-</div>
 
-<app-card></app-card>
+<section class="d-flex">
+  <div
+    class="
+      .d-none .d-md-none .d-xl-none
+      d-flex
+      flex-column flex-shrink-0
+      p-3
+      bg-secondary
+      w-25
+    "
+    style="width: 280px; height: 100vh"
+  >
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item">
+        <form class="d-flex" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline" type="submit">Search</button>
+        </form>
+      </li>
+    </ul>
+  </div>
+  <div class="col-sm-12" *ngFor="let card of cards$ | async">
+    <app-card [card]="card"></app-card>
+  </div>
+</section>
