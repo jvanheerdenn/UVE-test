@@ -25,6 +25,7 @@ export class AppComponent {
     } else {
       this.searchText = this.searchText + event.key;
     }
-    this.cards$ = this.service.filterData(cards$);
+    console.log(this.searchText)
+    // this.cards$ = this.service.filterData(cards$);
   }
 }

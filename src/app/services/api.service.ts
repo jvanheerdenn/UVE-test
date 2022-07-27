@@ -24,11 +24,11 @@ export class ApiService {
           email: val.email,
           phoneNumber: val.phone,
         }))
-      ),
+      )
     );
   }
 
-  filterData(cards: Cards): Observable<Card[]> {
-    return of()
-  }
+  // filterData(cards: Cards): Observable<Card[]> {
+  //   return of()
+  // }
 }
