@@ -1,4 +1,4 @@
-<div class="d-flex" style="margin: 30px">
+<div class="d-flex col-xl-4 col-sm-4 col-md-4 col-lg-4" style="margin: 30px">
   <div class="card d-flex flex-row" style="width: 18rem; border-radius: 10px;">
     <div class="res-circle">
       <div class="circle-txt">{{ card.capitalLetters }}</div>
@@ -8,8 +8,8 @@
       <p class="card-text">
         {{ card.userName }}
       </p>
-      <a class="card-text" href="#">{{ card.email }}</a>
-      <a lass="card-text" href="#">{{ card.phoneNumber }}</a>
+      <a class="card-text" href="mailto:{{ card.email }}">{{ card.email }}</a>
+      <a lass="card-text" href="tel:{{ card.phoneNumber }}">{{ card.phoneNumber }}</a>
     </div>
   </div>
 </div>
