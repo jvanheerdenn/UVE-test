@@ -25,7 +25,10 @@ export class ApiService {
           phoneNumber: val.phone,
         }))
       ),
-      tap(console.log)
     );
+  }
+
+  filterData(cards: Cards): Observable<Card[]> {
+    return of()
   }
 }
