@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 import { APIResponse } from '../models/api.model';
 import { Card } from '../models/card.model';
 
@@ -16,7 +16,7 @@ export class ApiService {
     return this.http.get<any>(route).pipe(
       map((arr: APIResponse[]) =>
         arr.map((val: APIResponse) => ({
-          capitalLetters: `${val.name.split(' ')[0].slice(0, 1)} ${val.name
+          capitalLetters: `${val.name.split(' ')[0].slice(0, 1)}${val.name
             .split(' ')[1]
             .slice(0, 1)}`,
           name: val.name,
@@ -24,7 +24,8 @@ export class ApiService {
           email: val.email,
           phoneNumber: val.phone,
         }))
-      )
+      ),
+      tap(console.log)
     );
   }
 }

@@ -41,7 +41,7 @@
       </li>
     </ul>
   </div>
-  <div class="col-sm-12" *ngFor="let card of cards$ | async">
-    <app-card [card]="card"></app-card>
+  <div class="col-sm-12">
+    <app-card *ngFor="let card of cards$ | async" [card]="card"></app-card>
   </div>
 </section>

@@ -1,13 +1,15 @@
-<div style="margin: 30px">
-  <div class="card" style="width: 18rem; border-radius: 10px;">
-    <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+<div class="d-flex" style="margin: 30px">
+  <div class="card d-flex flex-row" style="width: 18rem; border-radius: 10px;">
+    <div class="res-circle">
+      <div class="circle-txt">{{ card.capitalLetters }}</div>
+    </div>
     <div class="card-body">
       <h5 class="card-title">{{ card.name }}</h5>
       <p class="card-text">
         {{ card.userName }}
       </p>
-      <a class="card-text" href="#">{{card.email}}</a>
-      <a lass="card-text" href="#">{{card.phoneNumber}}</a>
+      <a class="card-text" href="#">{{ card.email }}</a>
+      <a lass="card-text" href="#">{{ card.phoneNumber }}</a>
     </div>
   </div>
 </div>
