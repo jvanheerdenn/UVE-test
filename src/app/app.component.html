@@ -1,4 +1,42 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<nav class="navbar navbar-expand-sm bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">CONTACTS</a>
+    <div class="collapse navbar-collapse float-right">
+      <form class="d-flex .d-none .d-md-block .d-xl-block" role="search">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<div
+  class="
+    .d-none .d-md-none .d-xl-none
+    d-flex
+    flex-column flex-shrink-0
+    p-3
+    bg-light
+    w-25
+  "
+  style="width: 280px; height: 100vh"
+>
+  <ul class="nav nav-pills flex-column mb-auto">
+    <li class="nav-item">
+      <form class="d-flex" role="search">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline" type="submit">Search</button>
+      </form>
+    </li>
+  </ul>
+</div>
+<app-card></app-card>
